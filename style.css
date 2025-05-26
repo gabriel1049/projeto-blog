@@ -82,3 +82,21 @@
     font-weight: 200;
     color: var(--color-white);
 }
+
+
+.sessao_principais_post { 
+    display: flex;
+    align-items: center;
+    padding: 10px 0px;
+    gap: 30px;
+    justify-content: center;
+}
+
+.img_card_section_hero_principal > img {
+    max-width: 240px;
+}
+
+.card_unico_post_section_hero_principal {
+    display: flex;
+    gap: 20px;
+}
