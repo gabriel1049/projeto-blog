@@ -353,3 +353,38 @@
 .checkbox-container input {
   margin-right: 8px;
 }
+
+
+/* ================================================
+   ASIDE POST CARD
+================================================ */
+
+.h3_principais_postagens {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.card_post_aside {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.card_post_aside > img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.text_content_post_aside {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.text_content_post_aside > span {
+    padding: 5px 20px;
+    border: 1px solid #c8c8c8;
+    font-size: 0.9em;
+    font-weight: 300;
+    border-radius: 10px;
+    max-width: 40%;
+    text-align: center;
+}
