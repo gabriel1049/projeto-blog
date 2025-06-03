@@ -398,3 +398,140 @@
   height: 400px;
   margin-top: 30px;
 }
+
+
+
+.carousel-wrapper {
+  position: relative;
+  margin-top: 60px;
+  padding: 0 20px;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+/* Container do carrossel */
+.carousel-container {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 20px;
+}
+
+.carousel-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* FADE à DIREITA */
+.carousel-fade.right {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 80px;
+  height: 100%;
+  background: linear-gradient(to right, transparent, #fff);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* FADE à ESQUERDA */
+.carousel-fade.left {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 80px;
+  height: 100%;
+  background: linear-gradient(to left, transparent, #fff);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Cartões do produto */
+.product {
+  flex: 0 0 280px;
+  min-height: 460px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  transition: transform 0.3s;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease-out;
+}
+
+.product.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.product img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Conteúdo textual do card */
+.text_product {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+  margin-top: 16px;
+  text-align: center;
+}
+
+.text_product h3 {
+  font-size: 1.05em;
+  font-weight: 600;
+  color: #2d2d2f;
+  line-height: 1.4em;
+  min-height: 2.8em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.text_product p {
+  font-size: 0.95em;
+  color: #7a7a7a;
+  margin-top: 4px;
+}
+
+.price {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #2d2d2f;
+  margin-top: 10px;
+}
+
+.text_product a {
+  margin-top: auto;
+  display: block;
+}
+
+.text_product a button {
+  background-color: #2d2d2f;
+  color: #ffffff;
+  border: none;
+  padding: 12px 0;
+  width: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  font-size: 0.95em;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.text_product a button:hover {
+  background-color: #000;
+  transform: translateY(-2px);
+}
+
