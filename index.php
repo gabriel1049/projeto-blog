@@ -13,31 +13,16 @@
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/global.css">
     <title>Blog GOAT</title>
 </head>
 
 <body>
 
-    <!-- Cabeçalho principal do site -->
-    <header class="header_nav_bar wrapper_padding">
-        <div class="img_logo_header">
-            <a href="/">
-                <img src="logo.png" alt="Logo da GOAT">
-            </a>
-        </div>
+    <?php
+    include "components/header.php";
+    ?>
 
-        <nav class="nav_bar" aria-label="Menu principal">
-            <ul>
-                <li><a href="#">Início</a></li>
-                <li><a href="#">Categoria 1</a></li>
-                <li><a href="#">Categoria 2</a></li>
-                <li><a href="#">Categoria 3</a></li>
-                <li><a href="#">Categoria 4</a></li>
-                <li><a href="#">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
 
     <!-- Hero/banner introdutório -->
     <section class="hero_banner wrapper_padding" role="banner">
@@ -64,7 +49,7 @@
                 </div>
 
                 <figure class="img_card_section_hero_principal">
-                    <img src="./post1.png" alt="Imagem do post">
+                    <img src="./img/post1.png" alt="Imagem do post">
                 </figure>
             </article>
 
@@ -77,7 +62,7 @@
                 </div>
 
                 <figure class="img_card_section_hero_principal">
-                    <img src="./frame-banner.png" alt="Imagem do post">
+                    <img src="./img/frame-banner.png" alt="Imagem do post">
                 </figure>
             </article>
 
@@ -90,7 +75,7 @@
                 </div>
 
                 <figure class="img_card_section_hero_principal">
-                    <img src="./post2.png" alt="Imagem do post">
+                    <img src="./img/post2.png" alt="Imagem do post">
                 </figure>
             </article>
 
@@ -99,7 +84,7 @@
 
         <section class="banner_servico1" aria-label="Banner promocional">
             <figure>
-                <img src="./banner_servico1.png" alt="Banner com serviço 1">
+                <img src="./img/banner_servico1.png" alt="Banner com serviço 1">
             </figure>
         </section>
     </section>
@@ -117,7 +102,7 @@
                 <article class="post">
                     <figure class="img_post">
                         <span class="categoria">Destination</span>
-                        <img src="./post2.png" alt="Imagem da postagem 1">
+                        <img src="./img/post2.png" alt="Imagem da postagem 1">
                     </figure>
                     <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h3>
                     <div class="tempo_post">
@@ -131,7 +116,7 @@
                 <article class="post">
                     <figure class="img_post">
                         <span class="categoria">Destination</span>
-                        <img src="./post1.png" alt="Imagem da postagem 2">
+                        <img src="./img/post1.png" alt="Imagem da postagem 2">
                     </figure>
                     <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h3>
                     <div class="tempo_post">
@@ -144,7 +129,7 @@
                 <article class="post">
                     <figure class="img_post">
                         <span class="categoria">Destination</span>
-                        <img src="./post1.png" alt="Imagem da postagem 3">
+                        <img src="./img/post1.png" alt="Imagem da postagem 3">
                     </figure>
                     <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h3>
                     <div class="tempo_post">
@@ -157,7 +142,7 @@
                 <article class="post">
                     <figure class="img_post">
                         <span class="categoria">Destination</span>
-                        <img src="./post2.png" alt="Imagem da postagem 4">
+                        <img src="./img/post2.png" alt="Imagem da postagem 4">
                     </figure>
                     <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h3>
                     <div class="tempo_post">
@@ -170,7 +155,7 @@
                 <article class="post">
                     <figure class="img_post">
                         <span class="categoria">Destination</span>
-                        <img src="./post2.png" alt="Imagem da postagem 4">
+                        <img src="./img/post2.png" alt="Imagem da postagem 4">
                     </figure>
                     <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h3>
                     <div class="tempo_post">
@@ -183,7 +168,7 @@
                 <article class="post">
                     <figure class="img_post">
                         <span class="categoria">Destination</span>
-                        <img src="./post2.png" alt="Imagem da postagem 4">
+                        <img src="./img/post2.png" alt="Imagem da postagem 4">
                     </figure>
                     <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h3>
                     <div class="tempo_post">
@@ -195,64 +180,30 @@
             </section>
         </section>
 
-        <!-- Coluna lateral com formulário de contato/newsletter -->
-        <aside class="column_info_hero" aria-label="Formulário de contato">
-            <form class="form-container">
-                <h2>Contato Com A <span class="highlight">LOJA</span></h2>
-                <p>Get All The Top Stories From<br>Blogs To Keep Track.</p>
-                <input type="email" placeholder="Enter your e-mail" required>
-                <button type="submit" class="subscribe">SUBSCRIBE NOW</button>
-                <label class="checkbox-container">
-                    <input type="checkbox" required>
-                    <span class="checkmark"></span>
-                    I agree to the terms & conditions
-                </label>
-            </form>
+        <?php
+        include "components/aside.php";
+        ?>
 
-            <section class="container_card_aside_home">
-                <h3 class="h3_principais_postagens">Principais Postagens</h3>
-
-                <div class="card_post_aside">
-                
-                    <div class="text_content_post_aside">
-                        <span>Categoria</span>
-                        <h3>Lorem ipsum dolor sit amet consectetur, adipisicing</h3>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam debitis
-                            quasi repellat excepturi unde consectetur ad maxime quos tenetur quibusdam, quidem neque a
-                            nemo quas.</p>
-                        <time datetime="2024-08-27" class="data_post">
-                            <i class="fa-regular fa-calendar"></i> 27 Maio, 2025
-                        </time>
-                    </div>
-                </div>
-
-                <div class="card_info_post_aside">
-                    <div class="text_content_post_aside">
-                        <span>Categoria</span>
-                        <h3>Lorem ipsum dolor sit amet consectetur, adipisicing</h3>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam debitis
-                            quasi repellat excepturi unde consectetur ad maxime quos tenetur quibusdam, quidem neque a
-                            nemo quas.</p>
-                        <time datetime="2024-08-27" class="data_post">
-                            <i class="fa-regular fa-calendar"></i> 27 Maio, 2025
-                        </time>
-                    </div>
-                </div>
-            </section>
-
-            <div class="div-servico-banner-aside">
-                <img src="./banner-servico23.png" alt="">
-            </div>
-        </aside>
     </main>
 
-    <section class="carousel-wrapper wrapper_margin">
-  <div class="carousel-fade left"></div>     <!-- NOVO -->
-  <div class="carousel-fade right"></div>    <!-- Já existia -->
-  <div class="carousel-container" id="carousel-container"></div>
-</section>
+    <section class="banner_servico1 wrapper_margin" aria-label="Banner promocional">
+        <figure>
+            <img src="./img/banner_servico1.png" alt="Banner com serviço 1">
+        </figure>
+    </section>
 
-<script src="produtos.js"></script>
+    <section class="carousel-wrapper wrapper_margin">
+        <div class="carousel-fade left"></div> <!-- NOVO -->
+        <div class="carousel-fade right"></div> <!-- Já existia -->
+        <div class="carousel-container" id="carousel-container"></div>
+    </section>
+
+    <?php
+    include "components/footer.php";
+    ?>
+    <script src="produtos.js"></script>
+    <script src="nav.js"></script>
+
 </body>
 
 </html>
